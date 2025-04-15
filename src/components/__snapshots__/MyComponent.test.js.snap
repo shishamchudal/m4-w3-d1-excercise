@@ -2,6 +2,11 @@
 
 exports[`MyComponent should render initial layout 1`] = `
 [
-  <div />,
+  <div>
+    <input
+      onChange={[Function]}
+      type="text"
+    />
+  </div>,
 ]
 `;
