@@ -16,6 +16,14 @@ describe("MyComponent", () => {
 
     form.props().onChange({ target: { name: "myName", value: "myValue" } });
 
-    expect(component.state('input')).toBeDefined();
+    expect(component.state("input")).toBeDefined();
+  });
+  it("should create an entry in component state with the event value", () => {
+    const component = shallow(<MyComponent />);
+    const form = component.find("input");
+
+    form.props().onChange({ target: { name: "myName", value: "myValue" } });
+
+    expect(component.state("input")).toEqual("myValue");
   });
 });
